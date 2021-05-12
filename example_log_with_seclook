@@ -1,0 +1,51 @@
+--
+Transaction ID: YJwRFNHPfEedFmUeK7-ZkAAAAJc
+Time: 12/May/2021:13:32:04 --0400
+Local Address: x.x.x.x
+Local Port: 443
+Remote Address: x.x.x.x
+Remote Port: 44348
+--
+
+--
+{"producer": 
+["ModSecurity for Apache/2.9.3 (http://www.modsecurity.org/)", "OWASP_CRS/3.3.0"], "engine_mode": "ENABLED", "messages": 
+["Access denied with code 406 (phase 2). Matched phrase "wp-config.php" at REQUEST_FILENAME. 
+[file "/etc/modsecurity.d/REQUEST-930-APPLICATION-ATTACK-LFI.conf"] 
+[line "124"] 
+[id "930130"] 
+[msg "Restricted File Access Attempt"] 
+[data "Matched Data: wp-config.php found within REQUEST_FILENAME: /wp-config.php_original"] 
+[severity "CRITICAL"] 
+[ver "OWASP_CRS/3.3.0"] 
+[tag "application-multi"] 
+[tag "language-multi"] 
+[tag "platform-multi"] 
+[tag "attack-lfi"] 
+[tag "paranoia-level/1"] 
+[tag "OWASP_CRS"] 
+[tag "capec/1000/255/153/126"] 
+[tag "PCI/6.5.4"]"], "error_messages": 
+["
+[file "apache2_util.c"] 
+[line 271] 
+[level 3] 
+[client x.x.x.x] ModSecurity: Access denied with code 406 (phase 2). Matched phrase "wp-config.php" at REQUEST_FILENAME. 
+[file "/etc/modsecurity.d/REQUEST-930-APPLICATION-ATTACK-LFI.conf"] 
+[line "124"] 
+[id "930130"] 
+[msg "Restricted File Access Attempt"] 
+[data "Matched Data: wp-config.php found within REQUEST_FILENAME: /wp-config.php_original"] 
+[severity "CRITICAL"] 
+[ver "OWASP_CRS/3.3.0"] 
+[tag "application-multi"] 
+[tag "language-multi"] 
+[tag "platform-multi"] 
+[tag "attack-lfi"] 
+[tag "paranoia-level/1"] 
+[tag "OWASP_CRS"] 
+[tag "capec/1000/255/153/126"] 
+[tag "PCI/6.5.4"] 
+[hostname "example.com"] 
+[uri "/wp-config.php_original"] 
+[unique_id "YJwRFNHPfEedFmUeK7-ZkAAAAJc"]"], "stopwatch": {"p2": 1544, "p3": 0, "p1": 1030, "p4": 0, "p5": 251, "sr": 224, "sw": 1, "l": 0, "gc": 0}, "handler": "proxy-server", "action": {"phase": 2, "message": "Matched phrase "wp-config.php" at REQUEST_FILENAME.", "intercepted": true}, "server": "Apache/2"}
